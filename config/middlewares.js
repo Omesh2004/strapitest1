@@ -5,7 +5,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://insti-website.netlify.app/', 'http://localhost:3000'], // Replace with your deployed frontend domain
+      origin: ['https://insti-website.netlify.app', 'http://localhost:3000'], // Replace with your deployed frontend domain
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
       headers: '*',
       credentials: true,
