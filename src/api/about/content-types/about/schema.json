@@ -17,7 +17,41 @@
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.slider"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "AI",
+        "HEALTHCARE",
+        "CORE",
+        "HUMAN SCIENCES"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "stats": {
+      "type": "json"
     }
   }
 }

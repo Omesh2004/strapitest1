@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "researchs",
+  "info": {
+    "singularName": "research",
+    "pluralName": "researchs",
+    "displayName": "Research",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "AI",
+        "HEALTHCARE",
+        "SCIENCE",
+        "CONFERENCES"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "stats": {
+      "type": "json"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

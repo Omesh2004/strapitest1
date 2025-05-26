@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mediaphotos",
+  "info": {
+    "singularName": "mediaphoto",
+    "pluralName": "mediaphotos",
+    "displayName": "mediaphoto",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "morninng",
+        "afternooon ",
+        "evening"
+      ]
+    }
+  }
+}

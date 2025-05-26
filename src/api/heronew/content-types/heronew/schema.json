@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "heronews",
+  "info": {
+    "singularName": "heronew",
+    "pluralName": "heronews",
+    "displayName": "heronew",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "innovation ",
+        "student news",
+        "media"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "author": {
+      "type": "string"
+    },
+    "heroImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
