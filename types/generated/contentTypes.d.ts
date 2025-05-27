@@ -665,9 +665,7 @@ export interface ApiResearchResearch extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    background: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
+    background: Schema.Attribute.String;
     category: Schema.Attribute.Enumeration<
       ['AI', 'HEALTHCARE', 'SCIENCE', 'CONFERENCES']
     >;
