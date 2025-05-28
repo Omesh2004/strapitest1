@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_chemical_and_biochemicals",
+  "info": {
+    "singularName": "announcement-chemical-and-biochemical",
+    "pluralName": "announcement-chemical-and-biochemicals",
+    "displayName": "announcement-chemical-&-biochemical"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "test",
+        "hello",
+        "world"
+      ]
+    },
+    "image": {
+      "type": "string"
+    }
+  }
+}

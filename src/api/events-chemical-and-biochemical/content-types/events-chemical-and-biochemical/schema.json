@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events_chemical_and_biochemicals",
+  "info": {
+    "singularName": "events-chemical-and-biochemical",
+    "pluralName": "events-chemical-and-biochemicals",
+    "displayName": "events-chemical-&-biochemical",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "test1"
+      ]
+    },
+    "image": {
+      "type": "string"
+    }
+  }
+}

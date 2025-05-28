@@ -411,6 +411,40 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAnnouncementChemicalAndBiochemicalAnnouncementChemicalAndBiochemical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_chemical_and_biochemicals';
+  info: {
+    displayName: 'announcement-chemical-&-biochemical';
+    pluralName: 'announcement-chemical-and-biochemicals';
+    singularName: 'announcement-chemical-and-biochemical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['test', 'hello', 'world']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-chemical-and-biochemical.announcement-chemical-and-biochemical'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -578,6 +612,41 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     location: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     summary: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_chemical_and_biochemicals';
+  info: {
+    description: '';
+    displayName: 'events-chemical-&-biochemical';
+    pluralName: 'events-chemical-and-biochemicals';
+    singularName: 'events-chemical-and-biochemical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['test1']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-chemical-and-biochemical.events-chemical-and-biochemical'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1234,11 +1303,13 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
+      'api::announcement-chemical-and-biochemical.announcement-chemical-and-biochemical': ApiAnnouncementChemicalAndBiochemicalAnnouncementChemicalAndBiochemical;
       'api::article.article': ApiArticleArticle;
       'api::articles-chemical-and-biochemical.articles-chemical-and-biochemical': ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
+      'api::events-chemical-and-biochemical.events-chemical-and-biochemical': ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical;
       'api::global.global': ApiGlobalGlobal;
       'api::heronew.heronew': ApiHeronewHeronew;
       'api::mediaphoto.mediaphoto': ApiMediaphotoMediaphoto;
