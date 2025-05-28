@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles_chemical_and_biochemicals",
+  "info": {
+    "singularName": "articles-chemical-and-biochemical",
+    "pluralName": "articles-chemical-and-biochemicals",
+    "displayName": "articles-chemical-&-biochemical",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello",
+        "one",
+        "two"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "image": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    }
+  }
+}

@@ -455,6 +455,41 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_chemical_and_biochemicals';
+  info: {
+    description: '';
+    displayName: 'articles-chemical-&-biochemical';
+    pluralName: 'articles-chemical-and-biochemicals';
+    singularName: 'articles-chemical-and-biochemical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello', 'one', 'two']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    details: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-chemical-and-biochemical.articles-chemical-and-biochemical'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   collectionName: 'authors';
   info: {
@@ -1200,6 +1235,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
+      'api::articles-chemical-and-biochemical.articles-chemical-and-biochemical': ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
