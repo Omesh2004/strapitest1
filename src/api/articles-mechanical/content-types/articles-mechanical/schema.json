@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles_mechanicals",
+  "info": {
+    "singularName": "articles-mechanical",
+    "pluralName": "articles-mechanicals",
+    "displayName": "articles-mechanical",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    }
+  }
+}

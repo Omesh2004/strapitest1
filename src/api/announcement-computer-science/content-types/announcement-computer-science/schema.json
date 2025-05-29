@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_computer_sciences",
+  "info": {
+    "singularName": "announcement-computer-science",
+    "pluralName": "announcement-computer-sciences",
+    "displayName": "announcement-computer-science"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "image": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Research",
+        "Admission",
+        "Intership",
+        "Coding Fest",
+        "Entrepreneurship"
+      ]
+    },
+    "fullContent": {
+      "type": "text"
+    }
+  }
+}

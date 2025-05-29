@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events_electricals",
+  "info": {
+    "singularName": "events-electrical",
+    "pluralName": "events-electricals",
+    "displayName": "events-electrical"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

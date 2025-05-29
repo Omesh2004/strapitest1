@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_mechanicals",
+  "info": {
+    "singularName": "announcement-mechanical",
+    "pluralName": "announcement-mechanicals",
+    "displayName": "announcement-mechanical",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enents_computer_sciences",
+  "info": {
+    "singularName": "enents-computer-science",
+    "pluralName": "enents-computer-sciences",
+    "displayName": "events-computer-science",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Coding-fest",
+        "Internship",
+        "Entrepreneurship"
+      ]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

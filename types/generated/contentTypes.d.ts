@@ -480,6 +480,123 @@ export interface ApiAnnouncementChemicalAndBiochemicalAnnouncementChemicalAndBio
   };
 }
 
+export interface ApiAnnouncementComputerScienceAnnouncementComputerScience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_computer_sciences';
+  info: {
+    displayName: 'announcement-computer-science';
+    pluralName: 'announcement-computer-sciences';
+    singularName: 'announcement-computer-science';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['Research', 'Admission', 'Intership', 'Coding Fest', 'Entrepreneurship']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-computer-science.announcement-computer-science'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAnnouncementElectricalAnnouncementElectrical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_electricals';
+  info: {
+    displayName: 'announcement-electrical';
+    pluralName: 'announcement-electricals';
+    singularName: 'announcement-electrical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-electrical.announcement-electrical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAnnouncementMechanicalAnnouncementMechanical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_mechanicals';
+  info: {
+    description: '';
+    displayName: 'announcement-mechanical';
+    pluralName: 'announcement-mechanicals';
+    singularName: 'announcement-mechanical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-mechanical.announcement-mechanical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -632,6 +749,154 @@ export interface ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical
   };
 }
 
+export interface ApiArticlesComputerScienceArticlesComputerScience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_computer_sciences';
+  info: {
+    description: '';
+    displayName: 'articles-computer-science';
+    pluralName: 'articles-computer-sciences';
+    singularName: 'articles-computer-science';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['Industry', 'Research', 'Placements', 'Featured']
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    fullcontent: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-computer-science.articles-computer-science'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiArticlesElectricalArticlesElectrical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_electricals';
+  info: {
+    displayName: 'articles-electrical';
+    pluralName: 'articles-electricals';
+    singularName: 'articles-electrical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-electrical.articles-electrical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiArticlesMechanicalArticlesMechanical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_mechanicals';
+  info: {
+    description: '';
+    displayName: 'articles-mechanical';
+    pluralName: 'articles-mechanicals';
+    singularName: 'articles-mechanical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-mechanical.articles-mechanical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   collectionName: 'authors';
   info: {
@@ -689,6 +954,47 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEnentsComputerScienceEnentsComputerScience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'enents_computer_sciences';
+  info: {
+    description: '';
+    displayName: 'events-computer-science';
+    pluralName: 'enents-computer-sciences';
+    singularName: 'enents-computer-science';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['Coding-fest', 'Internship', 'Entrepreneurship']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.Text;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::enents-computer-science.enents-computer-science'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -829,6 +1135,78 @@ export interface ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventsElectricalEventsElectrical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_electricals';
+  info: {
+    displayName: 'events-electrical';
+    pluralName: 'events-electricals';
+    singularName: 'events-electrical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-electrical.events-electrical'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventsMechanicalEventsMechanical
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_mechanicals';
+  info: {
+    displayName: 'events-mechanical';
+    pluralName: 'events-mechanicals';
+    singularName: 'events-mechanical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-mechanical.events-mechanical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1582,12 +1960,21 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::announcement-chemical-and-biochemical.announcement-chemical-and-biochemical': ApiAnnouncementChemicalAndBiochemicalAnnouncementChemicalAndBiochemical;
+      'api::announcement-computer-science.announcement-computer-science': ApiAnnouncementComputerScienceAnnouncementComputerScience;
+      'api::announcement-electrical.announcement-electrical': ApiAnnouncementElectricalAnnouncementElectrical;
+      'api::announcement-mechanical.announcement-mechanical': ApiAnnouncementMechanicalAnnouncementMechanical;
       'api::article.article': ApiArticleArticle;
       'api::articles-chemical-and-biochemical.articles-chemical-and-biochemical': ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical;
+      'api::articles-computer-science.articles-computer-science': ApiArticlesComputerScienceArticlesComputerScience;
+      'api::articles-electrical.articles-electrical': ApiArticlesElectricalArticlesElectrical;
+      'api::articles-mechanical.articles-mechanical': ApiArticlesMechanicalArticlesMechanical;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::enents-computer-science.enents-computer-science': ApiEnentsComputerScienceEnentsComputerScience;
       'api::event.event': ApiEventEvent;
       'api::events-chemical-and-biochemical.events-chemical-and-biochemical': ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical;
+      'api::events-electrical.events-electrical': ApiEventsElectricalEventsElectrical;
+      'api::events-mechanical.events-mechanical': ApiEventsMechanicalEventsMechanical;
       'api::global.global': ApiGlobalGlobal;
       'api::heronew.heronew': ApiHeronewHeronew;
       'api::mediaphoto.mediaphoto': ApiMediaphotoMediaphoto;

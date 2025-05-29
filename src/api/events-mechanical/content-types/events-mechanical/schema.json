@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events_mechanicals",
+  "info": {
+    "singularName": "events-mechanical",
+    "pluralName": "events-mechanicals",
+    "displayName": "events-mechanical"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "description": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    }
+  }
+}

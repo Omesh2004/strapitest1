@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_electricals",
+  "info": {
+    "singularName": "announcement-electrical",
+    "pluralName": "announcement-electricals",
+    "displayName": "announcement-electrical"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
