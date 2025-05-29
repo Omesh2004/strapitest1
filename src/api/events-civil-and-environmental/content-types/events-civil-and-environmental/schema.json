@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events_civil_and_environmentals",
+  "info": {
+    "singularName": "events-civil-and-environmental",
+    "pluralName": "events-civil-and-environmentals",
+    "displayName": "events-civil-&-environmental"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    }
+  }
+}

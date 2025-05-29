@@ -480,6 +480,44 @@ export interface ApiAnnouncementChemicalAndBiochemicalAnnouncementChemicalAndBio
   };
 }
 
+export interface ApiAnnouncementCivilAndEnvironmentalAnnouncementCivilAndEnvironmental
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_civil_and_environmentals';
+  info: {
+    displayName: 'announcement-civil-&-environmental';
+    pluralName: 'announcement-civil-and-environmentals';
+    singularName: 'announcement-civil-and-environmental';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-civil-and-environmental.announcement-civil-and-environmental'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAnnouncementComputerScienceAnnouncementComputerScience
   extends Struct.CollectionTypeSchema {
   collectionName: 'announcement_computer_sciences';
@@ -588,6 +626,44 @@ export interface ApiAnnouncementMechanicalAnnouncementMechanical
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::announcement-mechanical.announcement-mechanical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAnnouncementMetallurgicalAndMaterialAnnouncementMetallurgicalAndMaterial
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_metallurgical_and_materials';
+  info: {
+    displayName: 'announcement-metallurgical-&-material';
+    pluralName: 'announcement-metallurgical-and-materials';
+    singularName: 'announcement-metallurgical-and-material';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-metallurgical-and-material.announcement-metallurgical-and-material'
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
@@ -749,6 +825,44 @@ export interface ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical
   };
 }
 
+export interface ApiArticlesCivilAndEnvironmentalArticlesCivilAndEnvironmental
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_civil_and_environmentals';
+  info: {
+    displayName: 'articles-civil-&-environmental';
+    pluralName: 'articles-civil-and-environmentals';
+    singularName: 'articles-civil-and-environmental';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-civil-and-environmental.articles-civil-and-environmental'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticlesComputerScienceArticlesComputerScience
   extends Struct.CollectionTypeSchema {
   collectionName: 'articles_computer_sciences';
@@ -888,6 +1002,45 @@ export interface ApiArticlesMechanicalArticlesMechanical
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::articles-mechanical.articles-mechanical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiArticlesMetallurgicalAndMaterialArticlesMetallurgicalAndMaterial
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_metallurgical_and_materials';
+  info: {
+    description: '';
+    displayName: 'articles-metallurgical-&-material';
+    pluralName: 'articles-metallurgical-and-materials';
+    singularName: 'articles-metallurgical-and-material';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-metallurgical-and-material.articles-metallurgical-and-material'
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
@@ -1100,6 +1253,44 @@ export interface ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical
   };
 }
 
+export interface ApiEventsCivilAndEnvironmentalEventsCivilAndEnvironmental
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_civil_and_environmentals';
+  info: {
+    displayName: 'events-civil-&-environmental';
+    pluralName: 'events-civil-and-environmentals';
+    singularName: 'events-civil-and-environmental';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-civil-and-environmental.events-civil-and-environmental'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEventsComputerScienceEventsComputerScience
   extends Struct.CollectionTypeSchema {
   collectionName: 'events_computer_sciences';
@@ -1231,6 +1422,44 @@ export interface ApiEventsMechanicalEventsMechanical
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::events-mechanical.events-mechanical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventsMetallurgicalAndMaterialEventsMetallurgicalAndMaterial
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_metallurgical_and_materials';
+  info: {
+    displayName: 'events-metallurgical-&-material';
+    pluralName: 'events-metallurgical-and-materials';
+    singularName: 'events-metallurgical-and-material';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-metallurgical-and-material.events-metallurgical-and-material'
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
@@ -1987,21 +2216,27 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::announcement-chemical-and-biochemical.announcement-chemical-and-biochemical': ApiAnnouncementChemicalAndBiochemicalAnnouncementChemicalAndBiochemical;
+      'api::announcement-civil-and-environmental.announcement-civil-and-environmental': ApiAnnouncementCivilAndEnvironmentalAnnouncementCivilAndEnvironmental;
       'api::announcement-computer-science.announcement-computer-science': ApiAnnouncementComputerScienceAnnouncementComputerScience;
       'api::announcement-electrical.announcement-electrical': ApiAnnouncementElectricalAnnouncementElectrical;
       'api::announcement-mechanical.announcement-mechanical': ApiAnnouncementMechanicalAnnouncementMechanical;
+      'api::announcement-metallurgical-and-material.announcement-metallurgical-and-material': ApiAnnouncementMetallurgicalAndMaterialAnnouncementMetallurgicalAndMaterial;
       'api::article.article': ApiArticleArticle;
       'api::articles-chemical-and-biochemical.articles-chemical-and-biochemical': ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical;
+      'api::articles-civil-and-environmental.articles-civil-and-environmental': ApiArticlesCivilAndEnvironmentalArticlesCivilAndEnvironmental;
       'api::articles-computer-science.articles-computer-science': ApiArticlesComputerScienceArticlesComputerScience;
       'api::articles-electrical.articles-electrical': ApiArticlesElectricalArticlesElectrical;
       'api::articles-mechanical.articles-mechanical': ApiArticlesMechanicalArticlesMechanical;
+      'api::articles-metallurgical-and-material.articles-metallurgical-and-material': ApiArticlesMetallurgicalAndMaterialArticlesMetallurgicalAndMaterial;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
       'api::events-chemical-and-biochemical.events-chemical-and-biochemical': ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical;
+      'api::events-civil-and-environmental.events-civil-and-environmental': ApiEventsCivilAndEnvironmentalEventsCivilAndEnvironmental;
       'api::events-computer-science.events-computer-science': ApiEventsComputerScienceEventsComputerScience;
       'api::events-electrical.events-electrical': ApiEventsElectricalEventsElectrical;
       'api::events-mechanical.events-mechanical': ApiEventsMechanicalEventsMechanical;
+      'api::events-metallurgical-and-material.events-metallurgical-and-material': ApiEventsMetallurgicalAndMaterialEventsMetallurgicalAndMaterial;
       'api::global.global': ApiGlobalGlobal;
       'api::heronew.heronew': ApiHeronewHeronew;
       'api::mediaphoto.mediaphoto': ApiMediaphotoMediaphoto;

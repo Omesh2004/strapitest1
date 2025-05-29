@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_civil_and_environmentals",
+  "info": {
+    "singularName": "announcement-civil-and-environmental",
+    "pluralName": "announcement-civil-and-environmentals",
+    "displayName": "announcement-civil-&-environmental"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    }
+  }
+}

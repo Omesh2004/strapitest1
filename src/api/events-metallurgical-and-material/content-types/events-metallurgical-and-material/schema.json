@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events_metallurgical_and_materials",
+  "info": {
+    "singularName": "events-metallurgical-and-material",
+    "pluralName": "events-metallurgical-and-materials",
+    "displayName": "events-metallurgical-&-material"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    }
+  }
+}

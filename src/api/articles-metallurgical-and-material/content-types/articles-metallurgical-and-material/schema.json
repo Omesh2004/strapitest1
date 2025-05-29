@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles_metallurgical_and_materials",
+  "info": {
+    "singularName": "articles-metallurgical-and-material",
+    "pluralName": "articles-metallurgical-and-materials",
+    "displayName": "articles-metallurgical-&-material",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles_civil_and_environmentals",
+  "info": {
+    "singularName": "articles-civil-and-environmental",
+    "pluralName": "articles-civil-and-environmentals",
+    "displayName": "articles-civil-&-environmental"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    }
+  }
+}

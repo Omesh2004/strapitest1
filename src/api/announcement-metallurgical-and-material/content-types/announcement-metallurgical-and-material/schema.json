@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_metallurgical_and_materials",
+  "info": {
+    "singularName": "announcement-metallurgical-and-material",
+    "pluralName": "announcement-metallurgical-and-materials",
+    "displayName": "announcement-metallurgical-&-material"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    }
+  }
+}
