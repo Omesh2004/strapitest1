@@ -960,47 +960,6 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiEnentsComputerScienceEnentsComputerScience
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'enents_computer_sciences';
-  info: {
-    description: '';
-    displayName: 'events-computer-science';
-    pluralName: 'enents-computer-sciences';
-    singularName: 'enents-computer-science';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    category: Schema.Attribute.Enumeration<
-      ['Coding-fest', 'Internship', 'Entrepreneurship']
-    >;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    date: Schema.Attribute.Date;
-    description: Schema.Attribute.Text;
-    fullcontent: Schema.Attribute.Text;
-    image: Schema.Attribute.String;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::enents-computer-science.enents-computer-science'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   collectionName: 'events';
   info: {
@@ -1127,6 +1086,74 @@ export interface ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::events-chemical-and-biochemical.events-chemical-and-biochemical'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventsComputerScienceEventsComputerScience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_computer_sciences';
+  info: {
+    displayName: 'events-computer-science';
+    pluralName: 'events-computer-sciences';
+    singularName: 'events-computer-science';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    fullcontent: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-computer-science.events-computer-science'
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String &
@@ -1970,9 +1997,9 @@ declare module '@strapi/strapi' {
       'api::articles-mechanical.articles-mechanical': ApiArticlesMechanicalArticlesMechanical;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
-      'api::enents-computer-science.enents-computer-science': ApiEnentsComputerScienceEnentsComputerScience;
       'api::event.event': ApiEventEvent;
       'api::events-chemical-and-biochemical.events-chemical-and-biochemical': ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical;
+      'api::events-computer-science.events-computer-science': ApiEventsComputerScienceEventsComputerScience;
       'api::events-electrical.events-electrical': ApiEventsElectricalEventsElectrical;
       'api::events-mechanical.events-mechanical': ApiEventsMechanicalEventsMechanical;
       'api::global.global': ApiGlobalGlobal;
