@@ -4,8 +4,7 @@
   "info": {
     "singularName": "events-chemical-and-biochemical",
     "pluralName": "events-chemical-and-biochemicals",
-    "displayName": "events-chemical-&-biochemical",
-    "description": ""
+    "displayName": "events-chemical-and-biochemical"
   },
   "options": {
     "draftAndPublish": true
@@ -17,55 +16,25 @@
   },
   "attributes": {
     "title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
     },
     "description": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "string"
     },
-    "fullContent": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "fullcontent": {
+      "type": "text"
     },
     "date": {
-      "type": "date",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "date"
     },
     "category": {
       "type": "enumeration",
       "enum": [
-        "test1"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "image": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+        "hello"
+      ]
     }
   }
 }

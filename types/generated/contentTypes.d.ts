@@ -1524,8 +1524,7 @@ export interface ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical
   extends Struct.CollectionTypeSchema {
   collectionName: 'events_chemical_and_biochemicals';
   info: {
-    description: '';
-    displayName: 'events-chemical-&-biochemical';
+    displayName: 'events-chemical-and-biochemical';
     pluralName: 'events-chemical-and-biochemicals';
     singularName: 'events-chemical-and-biochemical';
   };
@@ -1538,51 +1537,21 @@ export interface ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical
     };
   };
   attributes: {
-    category: Schema.Attribute.Enumeration<['test1']> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    category: Schema.Attribute.Enumeration<['hello']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date: Schema.Attribute.Date &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    description: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    fullContent: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    image: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::events-chemical-and-biochemical.events-chemical-and-biochemical'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
