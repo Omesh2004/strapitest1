@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_chemistrys",
+  "info": {
+    "singularName": "announcement-chemistry",
+    "pluralName": "announcement-chemistrys",
+    "displayName": "announcement-chemistry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "hello"
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles_physics",
+  "info": {
+    "singularName": "articles-physic",
+    "pluralName": "articles-physics",
+    "displayName": "articles-physic"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "morning"
+      ]
+    }
+  }
+}

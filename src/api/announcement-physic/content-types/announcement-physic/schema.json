@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_physics",
+  "info": {
+    "singularName": "announcement-physic",
+    "pluralName": "announcement-physics",
+    "displayName": "announcement-physic"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "morning"
+      ]
+    }
+  }
+}

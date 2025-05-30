@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_humanities_social_sciences",
+  "info": {
+    "singularName": "announcement-humanities-social-science",
+    "pluralName": "announcement-humanities-social-sciences",
+    "displayName": "announcement-humanities-social-science"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "morning"
+      ]
+    }
+  }
+}

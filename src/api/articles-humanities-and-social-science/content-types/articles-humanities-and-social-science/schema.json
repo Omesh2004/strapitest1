@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles_humanities_and_social_sciences",
+  "info": {
+    "singularName": "articles-humanities-and-social-science",
+    "pluralName": "articles-humanities-and-social-sciences",
+    "displayName": "articles-humanities-and-social-science"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullcontent": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "morning"
+      ]
+    }
+  }
+}

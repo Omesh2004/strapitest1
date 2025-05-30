@@ -480,6 +480,45 @@ export interface ApiAnnouncementChemicalAndBiochemicalAnnouncementChemicalAndBio
   };
 }
 
+export interface ApiAnnouncementChemistryAnnouncementChemistry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_chemistrys';
+  info: {
+    description: '';
+    displayName: 'announcement-chemistry';
+    pluralName: 'announcement-chemistrys';
+    singularName: 'announcement-chemistry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-chemistry.announcement-chemistry'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAnnouncementCivilAndEnvironmentalAnnouncementCivilAndEnvironmental
   extends Struct.CollectionTypeSchema {
   collectionName: 'announcement_civil_and_environmentals';
@@ -596,6 +635,82 @@ export interface ApiAnnouncementElectricalAnnouncementElectrical
   };
 }
 
+export interface ApiAnnouncementHumanitiesSocialScienceAnnouncementHumanitiesSocialScience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_humanities_social_sciences';
+  info: {
+    displayName: 'announcement-humanities-social-science';
+    pluralName: 'announcement-humanities-social-sciences';
+    singularName: 'announcement-humanities-social-science';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-humanities-social-science.announcement-humanities-social-science'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAnnouncementMathematicAnnouncementMathematic
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_mathematics';
+  info: {
+    displayName: 'announcement-mathematic';
+    pluralName: 'announcement-mathematics';
+    singularName: 'announcement-mathematic';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-mathematic.announcement-mathematic'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAnnouncementMechanicalAnnouncementMechanical
   extends Struct.CollectionTypeSchema {
   collectionName: 'announcement_mechanicals';
@@ -664,6 +779,44 @@ export interface ApiAnnouncementMetallurgicalAndMaterialAnnouncementMetallurgica
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::announcement-metallurgical-and-material.announcement-metallurgical-and-material'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAnnouncementPhysicAnnouncementPhysic
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'announcement_physics';
+  info: {
+    displayName: 'announcement-physic';
+    pluralName: 'announcement-physics';
+    singularName: 'announcement-physic';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::announcement-physic.announcement-physic'
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
@@ -825,6 +978,75 @@ export interface ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical
   };
 }
 
+export interface ApiArticlesChemistryArticlesChemistry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_chemistrys';
+  info: {
+    description: '';
+    displayName: 'articles-chemistry';
+    pluralName: 'articles-chemistrys';
+    singularName: 'articles-chemistry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    fullcontent: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-chemistry.articles-chemistry'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticlesCivilAndEnvironmentalArticlesCivilAndEnvironmental
   extends Struct.CollectionTypeSchema {
   collectionName: 'articles_civil_and_environmentals';
@@ -972,6 +1194,82 @@ export interface ApiArticlesElectricalArticlesElectrical
   };
 }
 
+export interface ApiArticlesHumanitiesAndSocialScienceArticlesHumanitiesAndSocialScience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_humanities_and_social_sciences';
+  info: {
+    displayName: 'articles-humanities-and-social-science';
+    pluralName: 'articles-humanities-and-social-sciences';
+    singularName: 'articles-humanities-and-social-science';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-humanities-and-social-science.articles-humanities-and-social-science'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiArticlesMathematicArticlesMathematic
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_mathematics';
+  info: {
+    displayName: 'articles-mathematic';
+    pluralName: 'articles-mathematics';
+    singularName: 'articles-mathematic';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-mathematic.articles-mathematic'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticlesMechanicalArticlesMechanical
   extends Struct.CollectionTypeSchema {
   collectionName: 'articles_mechanicals';
@@ -1041,6 +1339,44 @@ export interface ApiArticlesMetallurgicalAndMaterialArticlesMetallurgicalAndMate
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::articles-metallurgical-and-material.articles-metallurgical-and-material'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiArticlesPhysicArticlesPhysic
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'articles_physics';
+  info: {
+    displayName: 'articles-physic';
+    pluralName: 'articles-physics';
+    singularName: 'articles-physic';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::articles-physic.articles-physic'
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
@@ -1253,6 +1589,50 @@ export interface ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical
   };
 }
 
+export interface ApiEventsChemistryEventsChemistry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_chemistrys';
+  info: {
+    description: '';
+    displayName: 'events-chemistry';
+    pluralName: 'events-chemistrys';
+    singularName: 'events-chemistry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['hello']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-chemistry.events-chemistry'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEventsCivilAndEnvironmentalEventsCivilAndEnvironmental
   extends Struct.CollectionTypeSchema {
   collectionName: 'events_civil_and_environmentals';
@@ -1393,6 +1773,82 @@ export interface ApiEventsElectricalEventsElectrical
   };
 }
 
+export interface ApiEventsHumanitiesAndSocialScienceEventsHumanitiesAndSocialScience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_humanities_and_social_sciences';
+  info: {
+    displayName: 'events-humanities-and-social-science';
+    pluralName: 'events-humanities-and-social-sciences';
+    singularName: 'events-humanities-and-social-science';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-humanities-and-social-science.events-humanities-and-social-science'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventsMathematicEventsMathematic
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_mathematics';
+  info: {
+    displayName: 'events-mathematic';
+    pluralName: 'events-mathematics';
+    singularName: 'events-mathematic';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullcontent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-mathematic.events-mathematic'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEventsMechanicalEventsMechanical
   extends Struct.CollectionTypeSchema {
   collectionName: 'events_mechanicals';
@@ -1460,6 +1916,44 @@ export interface ApiEventsMetallurgicalAndMaterialEventsMetallurgicalAndMaterial
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::events-metallurgical-and-material.events-metallurgical-and-material'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventsPhysicEventsPhysic
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_physics';
+  info: {
+    displayName: 'events-physic';
+    pluralName: 'events-physics';
+    singularName: 'events-physic';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['morning']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    fullContent: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-physic.events-physic'
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
@@ -2216,27 +2710,39 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::announcement-chemical-and-biochemical.announcement-chemical-and-biochemical': ApiAnnouncementChemicalAndBiochemicalAnnouncementChemicalAndBiochemical;
+      'api::announcement-chemistry.announcement-chemistry': ApiAnnouncementChemistryAnnouncementChemistry;
       'api::announcement-civil-and-environmental.announcement-civil-and-environmental': ApiAnnouncementCivilAndEnvironmentalAnnouncementCivilAndEnvironmental;
       'api::announcement-computer-science.announcement-computer-science': ApiAnnouncementComputerScienceAnnouncementComputerScience;
       'api::announcement-electrical.announcement-electrical': ApiAnnouncementElectricalAnnouncementElectrical;
+      'api::announcement-humanities-social-science.announcement-humanities-social-science': ApiAnnouncementHumanitiesSocialScienceAnnouncementHumanitiesSocialScience;
+      'api::announcement-mathematic.announcement-mathematic': ApiAnnouncementMathematicAnnouncementMathematic;
       'api::announcement-mechanical.announcement-mechanical': ApiAnnouncementMechanicalAnnouncementMechanical;
       'api::announcement-metallurgical-and-material.announcement-metallurgical-and-material': ApiAnnouncementMetallurgicalAndMaterialAnnouncementMetallurgicalAndMaterial;
+      'api::announcement-physic.announcement-physic': ApiAnnouncementPhysicAnnouncementPhysic;
       'api::article.article': ApiArticleArticle;
       'api::articles-chemical-and-biochemical.articles-chemical-and-biochemical': ApiArticlesChemicalAndBiochemicalArticlesChemicalAndBiochemical;
+      'api::articles-chemistry.articles-chemistry': ApiArticlesChemistryArticlesChemistry;
       'api::articles-civil-and-environmental.articles-civil-and-environmental': ApiArticlesCivilAndEnvironmentalArticlesCivilAndEnvironmental;
       'api::articles-computer-science.articles-computer-science': ApiArticlesComputerScienceArticlesComputerScience;
       'api::articles-electrical.articles-electrical': ApiArticlesElectricalArticlesElectrical;
+      'api::articles-humanities-and-social-science.articles-humanities-and-social-science': ApiArticlesHumanitiesAndSocialScienceArticlesHumanitiesAndSocialScience;
+      'api::articles-mathematic.articles-mathematic': ApiArticlesMathematicArticlesMathematic;
       'api::articles-mechanical.articles-mechanical': ApiArticlesMechanicalArticlesMechanical;
       'api::articles-metallurgical-and-material.articles-metallurgical-and-material': ApiArticlesMetallurgicalAndMaterialArticlesMetallurgicalAndMaterial;
+      'api::articles-physic.articles-physic': ApiArticlesPhysicArticlesPhysic;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
       'api::events-chemical-and-biochemical.events-chemical-and-biochemical': ApiEventsChemicalAndBiochemicalEventsChemicalAndBiochemical;
+      'api::events-chemistry.events-chemistry': ApiEventsChemistryEventsChemistry;
       'api::events-civil-and-environmental.events-civil-and-environmental': ApiEventsCivilAndEnvironmentalEventsCivilAndEnvironmental;
       'api::events-computer-science.events-computer-science': ApiEventsComputerScienceEventsComputerScience;
       'api::events-electrical.events-electrical': ApiEventsElectricalEventsElectrical;
+      'api::events-humanities-and-social-science.events-humanities-and-social-science': ApiEventsHumanitiesAndSocialScienceEventsHumanitiesAndSocialScience;
+      'api::events-mathematic.events-mathematic': ApiEventsMathematicEventsMathematic;
       'api::events-mechanical.events-mechanical': ApiEventsMechanicalEventsMechanical;
       'api::events-metallurgical-and-material.events-metallurgical-and-material': ApiEventsMetallurgicalAndMaterialEventsMetallurgicalAndMaterial;
+      'api::events-physic.events-physic': ApiEventsPhysicEventsPhysic;
       'api::global.global': ApiGlobalGlobal;
       'api::heronew.heronew': ApiHeronewHeronew;
       'api::mediaphoto.mediaphoto': ApiMediaphotoMediaphoto;

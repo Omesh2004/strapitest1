@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_mathematics",
+  "info": {
+    "singularName": "announcement-mathematic",
+    "pluralName": "announcement-mathematics",
+    "displayName": "announcement-mathematic"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullContent": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "morning"
+      ]
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}
