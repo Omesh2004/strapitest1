@@ -2147,7 +2147,7 @@ export interface ApiResearchResearch extends Struct.CollectionTypeSchema {
         };
       }>;
     category: Schema.Attribute.Enumeration<
-      ['AI', 'HEALTHCARE', 'SCIENCE', 'CONFERENCES']
+      ['TECH', 'HEALTHCARE', 'SCIENCE', 'CONFERENCES']
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
