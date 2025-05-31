@@ -2012,12 +2012,6 @@ export interface ApiHeronewHeronew extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    author: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     category: Schema.Attribute.Enumeration<
       ['innovation ', 'student news', 'media']
     > &

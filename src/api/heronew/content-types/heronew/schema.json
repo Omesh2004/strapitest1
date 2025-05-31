@@ -53,14 +53,6 @@
         }
       }
     },
-    "author": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "heroImage": {
       "type": "string",
       "pluginOptions": {
