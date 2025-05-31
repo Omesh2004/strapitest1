@@ -32,10 +32,6 @@
         }
       }
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
-    },
     "author": {
       "type": "relation",
       "relation": "manyToOne",

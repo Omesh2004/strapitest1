@@ -887,7 +887,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'>;
     summary: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
