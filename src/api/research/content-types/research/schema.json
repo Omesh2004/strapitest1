@@ -35,7 +35,7 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "AI",
+        "TECH",
         "HEALTHCARE",
         "SCIENCE",
         "CONFERENCES"
