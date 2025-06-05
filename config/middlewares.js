@@ -5,10 +5,15 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://insti-website.netlify.app', 'http://localhost:3000','https://beta.iitp.ac.in/','http://iitp.ac.local/'], // Replace with your deployed frontend domain
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-      headers: '*',
-      
+      origin: [
+        'https://insti-website.netlify.app',
+        'http://localhost:3000',
+        'https://beta.iitp.ac.in',  // No trailing slash
+        'http://iitp.ac.local'      // No trailing slash
+      ],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Add 'OPTIONS'
+      headers: ['Content-Type', 'Authorization', 'Accept', 'Origin'], // Explicit headers
+      keepHeaderOnError: true, // Ensures CORS headers are sent even on errors
     },
   },
   'strapi::poweredBy',
